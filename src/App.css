@@ -1,0 +1,23 @@
+.appWrapper{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "navbar content";    
+}
+
+.header{
+    grid-area: header;
+    background-color: brown;
+
+
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: blue;
+}
+
+.content{
+    grid-area: content;
+    background-color: aquamarine;
+}
