@@ -1,10 +1,14 @@
-import Header from "./components/Header"
-import NavBar from "./components/NavBar"
-import Profile from "./components/Profile"
+import Header from "./components/header/Header"
+import NavBar from "./components/navbar/NavBar"
+import Profile from "./components/profile/Profile"
+import Dialog from "./components/dialog/Dialog"
 import "./App.css"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
 
 const App = () => {
   return(
+    <BrowserRouter>
     <div className="appWrapper">
       <header className="header">
         <Header/>
@@ -15,10 +19,14 @@ const App = () => {
       </div>
       
       <div className="content">
-        <Profile/> 
+      <Routes>
+          <Route path="/" element={<Profile/>}/>
+          <Route path="/dialog" element={<Dialog/>}/>
+      </Routes>
       </div>
       
     </div>
+    </BrowserRouter>
   )
 }
 
